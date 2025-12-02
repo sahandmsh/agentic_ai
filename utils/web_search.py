@@ -28,6 +28,8 @@ class WebSearch:
             results = ddgs.text(query, max_results=max_results)
             for result in results:
                 url = result.get("href", None)
+                if url:
+                    urls.append(url)
         return urls
 
     def _fetch_page_content(
