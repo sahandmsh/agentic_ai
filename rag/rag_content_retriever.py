@@ -204,7 +204,6 @@ class RAGContentRetriever:
             biencoder_top_k,
             cross_encoder_top_k,
             cross_encoder_batch_size,
-            max_cross_encoder_token_length,
         )
         context = "\nContext: ".join(
             [passage_and_score[0] for passage_and_score in top_similar_items]
